@@ -36,7 +36,7 @@ function Accordion(props) {
       <div className="accordion__section">
         <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
           <p className="accordion__title">{props.title}</p>
-          <Chevron className={`${setRotate}`} width={10} fill={"#fff"} />
+          <Chevron className={`${setRotate}`} width={15} fill={"#fff"} />
         </button>
         <div
           ref={content}
