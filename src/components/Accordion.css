@@ -4,18 +4,17 @@
 .accordion__section {
   display: flex;
   flex-direction: column;
-  border: 1px solid #7f8d99;
   margin-bottom: 5px;
-  /* border-radius: 2px;
-  margin: 20px; */
+  /*border-radius: 2px;
+   margin: 20px; */
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  background-color: #7f8d99;
-  color: #fff;
+  background-color: #d6dedd;
+  color: #000;
   cursor: pointer;
-  padding: 18px;
+  padding: 10px;
   display: flex;
   align-items: center;
   border: none;
@@ -27,9 +26,14 @@
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .accordion:hover,
 .active {
-  /* background-color: #77bc22; */
+  background-color: #d6dedd;
   outline: none !important;
   border-style: none !important;
+}
+
+.list-group-item.active {
+  background-color: #d6dedd;
+  color: #000;
 }
 
 /* Style the accordion content title */
@@ -44,19 +48,20 @@
 /* Style the accordion chevron icon */
 .accordion__icon {
   margin-left: auto;
-  transition: transform 0.6s ease;
+  transition: transform 1s ease;
 }
 
 /* Style to rotate icon when state is active */
 .rotate {
-  transform: rotate(-90deg);
+  transform: rotate(-180deg);
 }
 
 /* Style the accordion content panel. Note: hidden by default */
 .accordion__content {
-  background-color: white;
+  background-color: #d6dedd;
   overflow: auto;
   transition: max-height 0.6s ease;
+  border-top: 1px solid #7f8d99;
 }
 
 /* Style the accordion content text */
@@ -64,5 +69,18 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  padding: 18px;
+  padding: 10px;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff !important;
+  border-color: green !important;
+  background-color: green !important;
+}
+
+.custom-control-input ~ .custom-control-label::before {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+  padding-top: 0 !important;
 }

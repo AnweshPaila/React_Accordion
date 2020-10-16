@@ -34,10 +34,15 @@ function Accordion(props) {
   return (
     <>
       <div className="accordion__section">
-        <button className={`accordion ${active}`} onClick={toggleAccordion}>
-          <p className="accordion__title">{props.title}</p>
-          <Chevron className={`${rotate}`} width={15} fill={"#fff"} />
-        </button>
+        <ul className="list-group">
+          <li
+            className={`list-group-item accordion ${active}`}
+            onClick={toggleAccordion}
+          >
+            <p className="accordion__title">{props.title}</p>
+            <Chevron className={`${rotate}`} width={15} color={"#000000"} />
+          </li>
+        </ul>
         <div
           ref={content}
           style={{ maxHeight: `${height}` }}
